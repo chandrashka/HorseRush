@@ -17,26 +17,26 @@ namespace Michsky.MUIP
         [SerializeField] private TextMeshProUGUI title;
         [SerializeField] private TextMeshProUGUI description;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateModalWindow();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateModalWindow(); }
         }
 
-        void UpdateModalWindow()
+        private void UpdateModalWindow()
         {
             if (background != null) { background.color = UIManagerAsset.modalWindowBackgroundColor; }
             if (contentBackground != null) { contentBackground.color = UIManagerAsset.modalWindowContentPanelColor; }

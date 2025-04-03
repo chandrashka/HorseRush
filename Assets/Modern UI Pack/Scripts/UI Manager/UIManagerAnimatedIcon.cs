@@ -11,29 +11,29 @@ namespace Michsky.MUIP
         public UIManager UIManagerAsset;
 
         [Header("Resources")]
-        public List<GameObject> images = new List<GameObject>();
-        public List<GameObject> imagesWithAlpha = new List<GameObject>();
+        public List<GameObject> images = new();
+        public List<GameObject> imagesWithAlpha = new();
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateAnimatedIcon();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateAnimatedIcon(); }
         }
 
-        void UpdateAnimatedIcon()
+        private void UpdateAnimatedIcon()
         {
             for (int i = 0; i < images.Count; ++i)
             {

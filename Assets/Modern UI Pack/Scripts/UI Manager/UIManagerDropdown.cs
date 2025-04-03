@@ -7,8 +7,8 @@ namespace Michsky.MUIP
     [ExecuteInEditMode]
     public class UIManagerDropdown : MonoBehaviour
     {
-        [HideInInspector] public bool overrideColors = false;
-        [HideInInspector] public bool overrideFonts = false;
+        [HideInInspector] public bool overrideColors;
+        [HideInInspector] public bool overrideFonts;
 
         [Header("Resources")]
         [SerializeField] private UIManager UIManagerAsset;
@@ -18,26 +18,26 @@ namespace Michsky.MUIP
         [SerializeField] private TextMeshProUGUI mainText;
         [SerializeField] private Image expandIcon;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateDropdown();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateDropdown(); }
         }
 
-        void UpdateDropdown()
+        private void UpdateDropdown()
         {
             if (overrideFonts == false && mainText != null) { mainText.font = UIManagerAsset.dropdownFont; }
             if (overrideColors == false)

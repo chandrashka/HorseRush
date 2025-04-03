@@ -9,8 +9,8 @@ namespace Michsky.MUIP
     {
         [Header("Settings")]
         [SerializeField] private UIManager UIManagerAsset;
-        public bool overrideColors = false;
-        public bool overrideFonts = false;
+        public bool overrideColors;
+        public bool overrideFonts;
 
         [Header("Resources")]
         [SerializeField] private TextMeshProUGUI mainText;
@@ -18,26 +18,26 @@ namespace Michsky.MUIP
         [SerializeField] private Image filledImage;
         [SerializeField] private Image backgroundImage;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateInputField();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateInputField(); }
         }
 
-        void UpdateInputField()
+        private void UpdateInputField()
         {
             if (overrideColors == false)
             {

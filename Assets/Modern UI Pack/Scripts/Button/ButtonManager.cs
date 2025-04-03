@@ -46,33 +46,33 @@ namespace Michsky.MUIP
 
         // Settings
         public bool isInteractable = true;
-        public bool enableIcon = false;
+        public bool enableIcon;
         public bool enableText = true;
-        public bool useCustomContent = false;
-        [SerializeField] private bool useCustomTextSize = false;
+        public bool useCustomContent;
+        [SerializeField] private bool useCustomTextSize;
         public bool checkForDoubleClick = true;
-        public bool enableButtonSounds = false;
+        public bool enableButtonSounds;
         public bool useHoverSound = true;
         public bool useClickSound = true;
         public AudioClip hoverSound;
         public AudioClip clickSound;
-        public bool useUINavigation = false;
+        public bool useUINavigation;
         public Navigation.Mode navigationMode = Navigation.Mode.Automatic;
         public GameObject selectOnUp;
         public GameObject selectOnDown;
         public GameObject selectOnLeft;
         public GameObject selectOnRight;
-        public bool wrapAround = false;
+        public bool wrapAround;
         public bool useRipple = true;
         [Range(0.1f, 1)] public float doubleClickPeriod = 0.25f;
         [Range(0.25f, 15)] public float fadingMultiplier = 8;
         [SerializeField] private AnimationSolution animationSolution = AnimationSolution.ScriptBased;
 
         // Events
-        public UnityEvent onClick = new UnityEvent();
-        public UnityEvent onDoubleClick = new UnityEvent();
-        public UnityEvent onHover = new UnityEvent();
-        public UnityEvent onLeave = new UnityEvent();
+        public UnityEvent onClick = new();
+        public UnityEvent onDoubleClick = new();
+        public UnityEvent onHover = new();
+        public UnityEvent onLeave = new();
 
         // Ripple
         [SerializeField] private RippleUpdateMode rippleUpdateMode = RippleUpdateMode.UnscaledTime;
@@ -80,21 +80,21 @@ namespace Michsky.MUIP
         public Sprite rippleShape;
         [Range(0.1f, 5)] public float speed = 1f;
         [Range(0.5f, 25)] public float maxSize = 4f;
-        public Color startColor = new Color(1f, 1f, 1f, 0.2f);
-        public Color transitionColor = new Color(1f, 1f, 1f, 0f);
-        [SerializeField] private bool renderOnTop = false;
-        [SerializeField] private bool centered = false;
+        public Color startColor = new(1f, 1f, 1f, 0.2f);
+        public Color transitionColor = new(1f, 1f, 1f, 0f);
+        [SerializeField] private bool renderOnTop;
+        [SerializeField] private bool centered;
 
         // Helpers
-        bool isInitialized = false;
-        Button targetButton;
-        bool isPointerOn;
-        bool waitingForDoubleClickInput;
-        const int navHelper = 1; 
+        private bool isInitialized;
+        private Button targetButton;
+        private bool isPointerOn;
+        private bool waitingForDoubleClickInput;
+        private const int navHelper = 1; 
 
 #if UNITY_EDITOR
         public bool isPreset;
-        public int latestTabIndex = 0;
+        public int latestTabIndex;
 #endif
 
         public enum AnimationSolution 
@@ -117,13 +117,13 @@ namespace Michsky.MUIP
             public int bottom = 5;
         }
 
-        void OnEnable()
+        private void OnEnable()
         {
             if (!isInitialized) { Initialize(); }
             UpdateUI();
         }
 
-        void OnDisable()
+        private void OnDisable()
         {
             if (!isInteractable)
                 return;
@@ -133,7 +133,7 @@ namespace Michsky.MUIP
             if (highlightCG != null) { highlightCG.alpha = 0; }
         }
 
-        void Initialize()
+        private void Initialize()
         {
 #if UNITY_EDITOR
             if (!Application.isPlaying) { return; }
@@ -425,7 +425,7 @@ namespace Michsky.MUIP
             onClick.Invoke();
         }
 
-        IEnumerator LayoutFix()
+        private IEnumerator LayoutFix()
         {
             yield return new WaitForSecondsRealtime(0.025f);
 
@@ -436,7 +436,7 @@ namespace Michsky.MUIP
             if (highlightCG != null) { LayoutRebuilder.ForceRebuildLayoutImmediate(highlightCG.GetComponent<RectTransform>()); }
         }
 
-        IEnumerator SetNormal()
+        private IEnumerator SetNormal()
         {
             StopCoroutine(nameof(SetHighlight));
             StopCoroutine(nameof(SetDisabled));
@@ -454,7 +454,7 @@ namespace Michsky.MUIP
             disabledCG.alpha = 0;
         }
 
-        IEnumerator SetHighlight()
+        private IEnumerator SetHighlight()
         {
             StopCoroutine(nameof(SetNormal));
             StopCoroutine(nameof(SetDisabled));
@@ -472,7 +472,7 @@ namespace Michsky.MUIP
             disabledCG.alpha = 0;
         }
 
-        IEnumerator SetDisabled()
+        private IEnumerator SetDisabled()
         {
             StopCoroutine(nameof(SetNormal));
             StopCoroutine(nameof(SetHighlight));
@@ -490,13 +490,13 @@ namespace Michsky.MUIP
             disabledCG.alpha = 1;
         }
 
-        IEnumerator CheckForDoubleClick()
+        private IEnumerator CheckForDoubleClick()
         {
             yield return new WaitForSecondsRealtime(doubleClickPeriod);
             waitingForDoubleClickInput = false;
         }
 
-        IEnumerator InitUINavigation(Navigation nav)
+        private IEnumerator InitUINavigation(Navigation nav)
         {
             yield return new WaitForSecondsRealtime(navHelper);
 

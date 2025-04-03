@@ -17,15 +17,15 @@ namespace Michsky.MUIP
 
         [Header("Color")]
         public ColorType colorType = ColorType.Primary;
-        public bool keepAlphaValue = false;
-        public bool useCustomColor = false;
+        public bool keepAlphaValue;
+        public bool useCustomColor;
 
         [Header("Font")]
         public FontType fontType = FontType.Primary;
-        public bool useCustomFont = false;
+        public bool useCustomFont;
 
-        Image imageObject;
-        TextMeshProUGUI textObject;
+        private Image imageObject;
+        private TextMeshProUGUI textObject;
 
         public enum ObjectType
         {
@@ -45,15 +45,15 @@ namespace Michsky.MUIP
             Secondary
         }
 
-        void Awake()
+        private void Awake()
         {
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
-            if (!UIManagerAsset.enableDynamicUpdate) { UpdateElement(); this.enabled = false; }
+            if (!UIManagerAsset.enableDynamicUpdate) { UpdateElement(); enabled = false; }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate) { UpdateElement(); }

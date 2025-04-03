@@ -14,8 +14,8 @@ namespace Michsky.MUIP
         [Header("Resources")]
         [SerializeField] private UIManager UIManagerAsset;
         public ButtonManager buttonManager;
-        [HideInInspector] public bool overrideColors = false;
-        [HideInInspector] public bool overrideFonts = false;
+        [HideInInspector] public bool overrideColors;
+        [HideInInspector] public bool overrideFonts;
 
         // Resources
         [HideInInspector] public Image disabledBackground;
@@ -28,27 +28,27 @@ namespace Michsky.MUIP
         [HideInInspector] public TextMeshProUGUI normalText;
         [HideInInspector] public TextMeshProUGUI highlightedText;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
             if (buttonManager == null) { buttonManager = GetComponent<ButtonManager>(); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateButton();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null || buttonManager == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateButton(); }
         }
 
-        void UpdateButton()
+        private void UpdateButton()
         {
             if (overrideColors == false)
             {

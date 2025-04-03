@@ -11,7 +11,7 @@ namespace Michsky.MUIP
         public string numberFormat;
 
         public float realValue;
-        private bool assignedRealValue = false;
+        private bool assignedRealValue;
 
         protected override void Start()
         {

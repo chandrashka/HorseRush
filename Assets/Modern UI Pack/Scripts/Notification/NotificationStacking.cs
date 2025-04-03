@@ -11,11 +11,11 @@ namespace Michsky.MUIP
         public float delay = 1;
 
         // Helpers
-        List<NotificationManager> notifications = new List<NotificationManager>();
-        int currentNotification = 0;
-        bool enableUpdating = false;
+        private readonly List<NotificationManager> notifications = new();
+        private int currentNotification;
+        private bool enableUpdating;
 
-        void Update()
+        private void Update()
         {
             if (notifications.Count == 0)
                 return;
@@ -38,7 +38,7 @@ namespace Michsky.MUIP
             enableUpdating = true;
         }
 
-        IEnumerator StartNotification()
+        private IEnumerator StartNotification()
         {
             yield return new WaitForSecondsRealtime(notifications[currentNotification].timer + delay);
            

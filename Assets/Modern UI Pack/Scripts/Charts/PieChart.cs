@@ -9,7 +9,7 @@ namespace Michsky.MUIP
 	public class PieChart : MaskableGraphic
 	{
 		// Chart Items
-		[SerializeField] public List<PieChartDataNode> chartData = new List<PieChartDataNode>();
+		[SerializeField] public List<PieChartDataNode> chartData = new();
 
 		// Settings
 		[Range(-75, 150)] public float borderThickness = 5;
@@ -20,15 +20,15 @@ namespace Michsky.MUIP
 		public bool addValueToIndicator = true;
 		public bool enableBorderColor;
 
-		private float fillAmount = 1f;
-		private int segments = 720;
+		private readonly float fillAmount = 1f;
+		private readonly int segments = 720;
 
 		[System.Serializable]
 		public class PieChartDataNode
 		{
 			public string name = "Chart Item";
 			public float value = 10;
-			public Color32 color = new Color32(255, 255, 255, 255);
+			public Color32 color = new(255, 255, 255, 255);
 			public Image indicatorImage;
 			public TextMeshProUGUI indicatorText;
 		}
@@ -39,9 +39,9 @@ namespace Michsky.MUIP
 			UpdateIndicators();
 		}
 
-		void Update()
+		private void Update()
 		{
-			this.borderThickness = (float)Mathf.Clamp(this.borderThickness, -75, rectTransform.rect.width / 3.333f);
+			borderThickness = (float)Mathf.Clamp(borderThickness, -75, rectTransform.rect.width / 3.333f);
 		}
 
 		protected override void OnPopulateMesh(VertexHelper vh)
@@ -50,10 +50,10 @@ namespace Michsky.MUIP
 				return;
 
 			float outer = -rectTransform.pivot.x * rectTransform.rect.width;
-			float inner = -rectTransform.pivot.x * rectTransform.rect.width + this.borderThickness;
+			float inner = -rectTransform.pivot.x * rectTransform.rect.width + borderThickness;
 
 			var outer1 = -rectTransform.pivot.x * rectTransform.rect.width * 0.6f;
-			var inner1 = -rectTransform.pivot.x * rectTransform.rect.width * 0.6f + this.borderThickness;
+			var inner1 = -rectTransform.pivot.x * rectTransform.rect.width * 0.6f + borderThickness;
 
 			vh.Clear();
 
@@ -160,8 +160,8 @@ namespace Michsky.MUIP
         {
 			chartData[itemIndex].value = itemValue;
 
-			this.enabled = false;
-			this.enabled = true;
+			enabled = false;
+			enabled = true;
 		}
 
 		public void AddNewItem()
@@ -186,7 +186,7 @@ namespace Michsky.MUIP
 			chartData.Add(item);
 		}
 
-		IEnumerator UpdateIndicatorLayout()
+		private IEnumerator UpdateIndicatorLayout()
 		{
 			yield return new WaitForSeconds(0.1f);
 			LayoutRebuilder.ForceRebuildLayoutImmediate(indicatorParent.GetComponentInParent<RectTransform>());

@@ -17,38 +17,38 @@ namespace Michsky.MUIP
         public int selectedIconIndex;
         [Range(0, 3)] public int spriteSize;
 
-        Image imageObject;
+        private Image imageObject;
         [HideInInspector] public string currentSize;
         [HideInInspector] public bool size32;
         [HideInInspector] public bool size64;
         [HideInInspector] public bool size128;
         [HideInInspector] public bool size256;
 
-        void Awake()
+        private void Awake()
         {
             try
             {
                 if (iconLibrary == null) { iconLibrary = Resources.Load<IconLibrary>("Icon Library"); }
                 if (imageObject == null) { imageObject = gameObject.GetComponent<Image>(); }
 
-                this.enabled = true;
+                enabled = true;
                 UpdateElement();
             }
 
             catch { Debug.LogWarning("<b>Icon Library</b> is missing, but it should be assigned.", this); }
         }
 
-        void Update()
+        private void Update()
         {
             if (iconLibrary.alwaysUpdate == true) { UpdateElement(); }
-            if (Application.isPlaying == true && iconLibrary.optimizeUpdates == true) { this.enabled = false; }
+            if (Application.isPlaying == true && iconLibrary.optimizeUpdates == true) { enabled = false; }
         }
 
         public void UpdateElement()
         {
             if (iconLibrary == null)
             {
-                this.enabled = false;
+                enabled = false;
                 return;
             }
 
@@ -65,7 +65,7 @@ namespace Michsky.MUIP
             }
 
             if (iconLibrary.alwaysUpdate == false)
-                this.enabled = false;
+                enabled = false;
         }
 
         public void UpdateSpriteSize(int spriteIndex, int newSize)

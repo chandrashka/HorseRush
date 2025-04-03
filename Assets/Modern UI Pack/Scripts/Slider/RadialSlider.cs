@@ -19,7 +19,7 @@ namespace Michsky.MUIP
         public TextMeshProUGUI valueText;
 
         // Settings
-        public float minValue = 0;
+        public float minValue;
         public float maxValue = 100;
         [Range(0, 8)] public int decimals;
         public bool isPercent;
@@ -33,7 +33,7 @@ namespace Michsky.MUIP
         [System.Serializable]
         public class SliderEvent : UnityEvent<float> { }
         [SerializeField]
-        public SliderEvent onValueChanged = new SliderEvent();
+        public SliderEvent onValueChanged = new();
         public UnityEvent onPointerEnter;
         public UnityEvent onPointerExit;
 

@@ -11,8 +11,8 @@ namespace Michsky.MUIP
         [SerializeField] private UIManager UIManagerAsset;
         public bool hasLabel;
         public bool hasPopupLabel;
-        [HideInInspector] public bool overrideColors = false;
-        [HideInInspector] public bool overrideFonts = false;
+        [HideInInspector] public bool overrideColors;
+        [HideInInspector] public bool overrideFonts;
 
         [Header("Resources")]
         [SerializeField] private Image background;
@@ -21,26 +21,26 @@ namespace Michsky.MUIP
         [HideInInspector] public TextMeshProUGUI label;
         [HideInInspector] public TextMeshProUGUI popupLabel;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateSlider();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateSlider(); }
         }
 
-        void UpdateSlider()
+        private void UpdateSlider()
         {
             if (UIManagerAsset.sliderThemeType == UIManager.SliderThemeType.Basic)
             {

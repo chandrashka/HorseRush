@@ -25,23 +25,23 @@ namespace Michsky.MUIP
         // Settings
         public bool enableTimer = true;
         public float timer = 3f;
-        [SerializeField] private bool useCustomContent = false;
-        public bool closeOnClick = false;
-        public bool useStacking = false;
+        [SerializeField] private bool useCustomContent;
+        public bool closeOnClick;
+        public bool useStacking;
         [HideInInspector] public bool isOn;
         public StartBehaviour startBehaviour = StartBehaviour.Disable;
         public CloseBehaviour closeBehaviour = CloseBehaviour.Disable;
         public SlideDirection slideDirection = SlideDirection.Default;
 
         // Events
-        public UnityEvent onOpen = new UnityEvent();
-        public UnityEvent onClose = new UnityEvent();
+        public UnityEvent onOpen = new();
+        public UnityEvent onClose = new();
 
         public enum StartBehaviour { None, Disable, Open }
         public enum CloseBehaviour { None, Disable, Destroy }
         public enum SlideDirection { Default, Left, Right }
 
-        void Awake()
+        private void Awake()
         {
             isOn = false;
 
@@ -54,7 +54,7 @@ namespace Michsky.MUIP
             }
         }
 
-        void Start()
+        private void Start()
         {
             if (startBehaviour == StartBehaviour.Disable) { gameObject.SetActive(false); }
             else if (startBehaviour == StartBehaviour.Open) { Open(); }
@@ -126,13 +126,13 @@ namespace Michsky.MUIP
             Close();
         }
 
-        IEnumerator StartTimer()
+        private IEnumerator StartTimer()
         {
             yield return new WaitForSecondsRealtime(timer);
             Close();
         }
 
-        IEnumerator DisableNotification()
+        private IEnumerator DisableNotification()
         {
             yield return new WaitForSecondsRealtime(1f);
 

@@ -134,7 +134,7 @@ namespace Michsky.MUIP
                 rsTarget.valueText.text = string.Format("{0}{1}", currentValue.floatValue, rsTarget.isPercent ? "%" : "");
             }
 
-            if (Application.isPlaying == false) { this.Repaint(); }
+            if (Application.isPlaying == false) { Repaint(); }
             serializedObject.ApplyModifiedProperties();
         }
     }

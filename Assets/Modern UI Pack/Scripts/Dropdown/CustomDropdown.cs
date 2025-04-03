@@ -30,11 +30,11 @@ namespace Michsky.MUIP
         public bool enableTrigger = true;
         public bool enableScrollbar = true;
         public bool updateOnEnable = true;
-        public bool outOnPointerExit = false;
+        public bool outOnPointerExit;
         public bool setHighPriority = true;
-        public bool invokeAtStart = false;
+        public bool invokeAtStart;
         public bool initAtStart = true;
-        public bool enableDropdownSounds = false;
+        public bool enableDropdownSounds;
         public bool useHoverSound = true;
         public bool useClickSound = true;
         [Range(1, 50)] public int itemPaddingTop = 8;
@@ -42,46 +42,46 @@ namespace Michsky.MUIP
         [Range(1, 50)] public int itemPaddingLeft = 8;
         [Range(1, 50)] public int itemPaddingRight = 25;
         [Range(1, 50)] public int itemSpacing = 8;
-        public int selectedItemIndex = 0;
+        public int selectedItemIndex;
 
         // Animation
         public AnimationType animationType;
         public PanelDirection panelDirection;
         [Range(25, 1000)] public float panelSize = 200;
         [Range(0.5f, 10)] public float curveSpeed = 3;
-        public AnimationCurve animationCurve = new AnimationCurve(new Keyframe(0.0f, 0.0f), new Keyframe(1.0f, 1.0f));
+        public AnimationCurve animationCurve = new(new Keyframe(0.0f, 0.0f), new Keyframe(1.0f, 1.0f));
 
         // Saving
-        public bool saveSelected = false;
+        public bool saveSelected;
         public string saveKey = "My Dropdown";
 
         // Item list
         [SerializeField]
-        public List<Item> items = new List<Item>();
+        public List<Item> items = new();
 
         // Events
         [System.Serializable] public class DropdownEvent : UnityEvent<int> { }
-        public DropdownEvent onValueChanged = new DropdownEvent();
+        public DropdownEvent onValueChanged = new();
         [System.Serializable] public class ItemTextChangedEvent : UnityEvent<TMP_Text> { }
-        public ItemTextChangedEvent onItemTextChanged = new ItemTextChangedEvent();
+        public ItemTextChangedEvent onItemTextChanged = new();
 
         // Audio
         public AudioClip hoverSound;
         public AudioClip clickSound;
 
         // Helpers
-        bool isInitialized = false;
+        private bool isInitialized;
         [HideInInspector] public bool isOn;
-        [HideInInspector] public int index = 0;
-        [HideInInspector] public int siblingIndex = 0;
+        [HideInInspector] public int index;
+        [HideInInspector] public int siblingIndex;
         [HideInInspector] public TextMeshProUGUI setItemText;
         [HideInInspector] public Image setItemImage;
-        EventTrigger triggerEvent;
-        Sprite imageHelper;
-        string textHelper;
+        private EventTrigger triggerEvent;
+        private Sprite imageHelper;
+        private string textHelper;
 
 #if UNITY_EDITOR
-        public bool extendEvents = false;
+        public bool extendEvents;
 #endif
 
         public enum AnimationType { Modular, Custom }
@@ -93,10 +93,10 @@ namespace Michsky.MUIP
             public string itemName = "Dropdown Item";
             public Sprite itemIcon;
             [HideInInspector] public int itemIndex;
-            public UnityEvent OnItemSelection = new UnityEvent();
+            public UnityEvent OnItemSelection = new();
         }
 
-        void OnEnable()
+        private void OnEnable()
         {
             if (!isInitialized) { Initialize(); }
             if (updateOnEnable && index < items.Count) { SetDropdownIndex(selectedItemIndex, false); }
@@ -107,7 +107,7 @@ namespace Michsky.MUIP
             listRect.sizeDelta = new Vector2(listRect.sizeDelta.x, 0);
         }
 
-        void Initialize()
+        private void Initialize()
         {
             if (enableTrigger && triggerObject != null)
             {
@@ -335,7 +335,7 @@ namespace Michsky.MUIP
             Animate();
         }
 
-        IEnumerator StartExpand()
+        private IEnumerator StartExpand()
         {
             float elapsedTime = 0;
 
@@ -355,7 +355,7 @@ namespace Michsky.MUIP
             listRect.sizeDelta = endPos;
         }
 
-        IEnumerator StartMinimize()
+        private IEnumerator StartMinimize()
         {
             float elapsedTime = 0;
 

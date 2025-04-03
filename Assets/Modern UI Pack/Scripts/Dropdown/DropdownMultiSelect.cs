@@ -28,9 +28,9 @@ namespace Michsky.MUIP
         public bool enableTrigger = true;
         public bool enableScrollbar = true;
         public bool setHighPriority = true;
-        public bool outOnPointerExit = false;
-        public bool isListItem = false;
-        public bool invokeAtStart = false;
+        public bool outOnPointerExit;
+        public bool isListItem;
+        public bool invokeAtStart;
         [Range(1, 50)] public int itemPaddingTop = 8;
         [Range(1, 50)] public int itemPaddingBottom = 8;
         [Range(1, 50)] public int itemPaddingLeft = 8;
@@ -44,21 +44,21 @@ namespace Michsky.MUIP
         public float panelSize = 200;
         public RectTransform listRect;
         public CanvasGroup listCG;
-        bool isInTransition = false;
-        float closeOn;
+        private bool isInTransition;
+        private float closeOn;
 
         // Items
         [SerializeField]
-        public List<Item> items = new List<Item>();
+        public List<Item> items = new();
 
         // Other variables
-        bool isInitialized = false;
-        int currentIndex;
-        Toggle currentToggle;
-        string textHelper;
-        bool isOn;
-        public int siblingIndex = 0;
-        EventTrigger triggerEvent;
+        private bool isInitialized;
+        private int currentIndex;
+        private Toggle currentToggle;
+        private string textHelper;
+        private bool isOn;
+        public int siblingIndex;
+        private EventTrigger triggerEvent;
 
         [System.Serializable]
         public class ToggleEvent : UnityEvent<bool> { }
@@ -71,10 +71,10 @@ namespace Michsky.MUIP
             public string itemName = "Dropdown Item";
             public bool isOn;
             [HideInInspector] public int itemIndex;
-            [SerializeField] public ToggleEvent onValueChanged = new ToggleEvent();
+            [SerializeField] public ToggleEvent onValueChanged = new();
         }
 
-        void OnEnable()
+        private void OnEnable()
         {
             if (isInitialized == false) { Initialize(); }
 
@@ -84,7 +84,7 @@ namespace Michsky.MUIP
             listRect.sizeDelta = new Vector2(listRect.sizeDelta.x, closeOn);
         }
 
-        void Initialize()
+        private void Initialize()
         {
             if (listCG == null) { listCG = gameObject.GetComponentInChildren<CanvasGroup>(); }
             if (listRect == null) { listRect = listCG.GetComponent<RectTransform>(); }
@@ -117,7 +117,7 @@ namespace Michsky.MUIP
             isInitialized = true;
         }
 
-        void Update()
+        private void Update()
         {
             if (isInTransition == false)
                 return;
@@ -125,7 +125,7 @@ namespace Michsky.MUIP
             ProcessModularAnimation();
         }
 
-        void ProcessModularAnimation()
+        private void ProcessModularAnimation()
         {
             if (isOn == true)
             {
@@ -163,7 +163,7 @@ namespace Michsky.MUIP
                 setItemText.text = textHelper;
 
                 items[i].itemIndex = i;
-                DropdownMultiSelect.Item mainItem = items[i];
+                Item mainItem = items[i];
 
                 Toggle itemToggle = go.GetComponent<Toggle>();
                 itemToggle.onValueChanged.AddListener(delegate { UpdateToggleData(mainItem.itemIndex); });
@@ -183,13 +183,13 @@ namespace Michsky.MUIP
             currentListParent = transform.parent;
         }
 
-        void UpdateToggle(bool value)
+        private void UpdateToggle(bool value)
         {
             if (value == true) { currentToggle.isOn = true; items[currentIndex].isOn = true; }
             else { currentToggle.isOn = false; items[currentIndex].isOn = false; }
         }
 
-        void UpdateToggleData(int itemIndex)
+        private void UpdateToggleData(int itemIndex)
         {
             currentIndex = itemIndex;
             currentToggle = itemParent.GetChild(currentIndex).GetComponent<Toggle>();
@@ -201,7 +201,7 @@ namespace Michsky.MUIP
             {
                 isOn = true;
                 isInTransition = true;
-                this.enabled = true;
+                enabled = true;
                 listCG.blocksRaycasts = true;
                 listCG.interactable = true;
 
@@ -216,7 +216,7 @@ namespace Michsky.MUIP
             {
                 isOn = false;
                 isInTransition = true;
-                this.enabled = true;
+                enabled = true;
                 listCG.blocksRaycasts = false;
                 listCG.interactable = false;
 

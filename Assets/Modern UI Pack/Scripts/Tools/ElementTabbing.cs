@@ -10,13 +10,13 @@ namespace Michsky.MUIP
     public class ElementTabbing : MonoBehaviour
     {
         // Helpers
-        int currentIndex = -1;
-        bool catchedObject = false;
-        ObjectType type;
+        private int currentIndex = -1;
+        private bool catchedObject;
+        private ObjectType type;
 
         public enum ObjectType { Button, InputField }
 
-        void Update()
+        private void Update()
         {
 #if ENABLE_LEGACY_INPUT_MANAGER
             if (Input.GetKeyDown(KeyCode.Tab))
@@ -59,7 +59,7 @@ namespace Michsky.MUIP
             }
         }
 
-        void SelectElement(int index)
+        private void SelectElement(int index)
         {
             currentIndex = index;
 

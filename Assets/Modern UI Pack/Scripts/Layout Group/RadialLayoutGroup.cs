@@ -35,7 +35,7 @@ namespace Michsky.MUIP
         [SerializeField] private float refAngleRange = 200;
         public float angleRange { get { return refAngleRange; } set { SetProperty(ref refAngleRange, value); } }
 
-        [SerializeField] private bool refChildRotate = false;
+        [SerializeField] private bool refChildRotate;
         public bool childRotate { get { return refChildRotate; } set { SetProperty(ref refChildRotate, value); } }
 
         public override void CalculateLayoutInputVertical() { }
@@ -43,17 +43,17 @@ namespace Michsky.MUIP
         public override void SetLayoutHorizontal() { CalculateChildrenPositions(); }
         public override void SetLayoutVertical() { CalculateChildrenPositions(); }
 
-        private List<RectTransform> childList = new List<RectTransform>();
-        private List<ILayoutIgnorer> ignoreList = new List<ILayoutIgnorer>();
+        private readonly List<RectTransform> childList = new();
+        private readonly List<ILayoutIgnorer> ignoreList = new();
 
         private void CalculateChildrenPositions()
         {
-            this.m_Tracker.Clear();
+            m_Tracker.Clear();
             childList.Clear();
 
-            for (int i = 0; i < this.transform.childCount; ++i)
+            for (int i = 0; i < transform.childCount; ++i)
             {
-                RectTransform rect = this.transform.GetChild(i) as RectTransform;
+                RectTransform rect = transform.GetChild(i) as RectTransform;
 
                 if (!rect.gameObject.activeSelf)
                     continue;
@@ -105,19 +105,19 @@ namespace Michsky.MUIP
             switch (layoutDir)
             {
                 case Direction.Clockwise:
-                    if (intervalCount > 0) { this.angleDelta = this.angleRange / intervalCount; }
-                    else { this.angleDelta = 0; }
+                    if (intervalCount > 0) { angleDelta = angleRange / intervalCount; }
+                    else { angleDelta = 0; }
                     break;
 
                 case Direction.Counterclockwise:
-                    if (intervalCount > 0) { this.angleDelta = this.angleRange / intervalCount; }
-                    else { this.angleDelta = 0; }
+                    if (intervalCount > 0) { angleDelta = angleRange / intervalCount; }
+                    else { angleDelta = 0; }
                     break;
 
                 case Direction.Bidirectional:
-                    if (intervalCount > 0) { this.angleDelta = this.angleRange / intervalCount; }
-                    else { this.angleDelta = 0; }
-                    this.angleStart = this.angleCenter - angleRange * 0.5f;
+                    if (intervalCount > 0) { angleDelta = angleRange / intervalCount; }
+                    else { angleDelta = 0; }
+                    angleStart = angleCenter - angleRange * 0.5f;
                     break;
             }
         }
@@ -130,20 +130,20 @@ namespace Michsky.MUIP
             switch (layoutDir)
             {
                 case Direction.Clockwise:
-                    if (intervalCount > 0) { this.radiusDelta = radiusRange / intervalCount; }
-                    else { this.radiusDelta = 0; }
+                    if (intervalCount > 0) { radiusDelta = radiusRange / intervalCount; }
+                    else { radiusDelta = 0; }
                     break;
 
                 case Direction.Counterclockwise:
 
                 case Direction.Bidirectional:
-                    if (intervalCount > 0) { this.radiusDelta = radiusRange / intervalCount; }
-                    else { this.radiusDelta = 0; }
+                    if (intervalCount > 0) { radiusDelta = radiusRange / intervalCount; }
+                    else { radiusDelta = 0; }
                     break;
             }
         }
 
-        private static readonly Vector2 center = new Vector2(0.5f, 0.5f);
+        private static readonly Vector2 center = new(0.5f, 0.5f);
 
         private void ProcessOneChild(RectTransform child, float angle, float radius)
         {
@@ -161,7 +161,7 @@ namespace Michsky.MUIP
             child.anchorMax = center;
             child.pivot = center;
 
-            if (this.childRotate) { child.localEulerAngles = new Vector3(0, 0, angle); }
+            if (childRotate) { child.localEulerAngles = new Vector3(0, 0, angle); }
             else { child.localEulerAngles = Vector3.zero; }
         }
     }

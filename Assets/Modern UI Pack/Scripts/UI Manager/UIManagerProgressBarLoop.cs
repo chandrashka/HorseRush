@@ -10,32 +10,32 @@ namespace Michsky.MUIP
         [SerializeField] private UIManager UIManagerAsset;
         public bool hasBackground;
         public bool useRegularBackground;
-        public bool overrideColors = false;
+        public bool overrideColors;
 
         [Header("Resources")]
         public Image bar;
         [HideInInspector] public Image background;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateProgressBar();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateProgressBar(); }
         }
 
-        void UpdateProgressBar()
+        private void UpdateProgressBar()
         {
             if (overrideColors == false)
             {

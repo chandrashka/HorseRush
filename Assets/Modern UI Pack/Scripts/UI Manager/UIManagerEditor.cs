@@ -9,27 +9,27 @@ namespace Michsky.MUIP
     [System.Serializable]
     public class UIManagerEditor : Editor
     {
-        GUISkin customSkin;
+        private GUISkin customSkin;
         protected static string buildID = "B16-20241031";
         protected static float foldoutItemSpace = 2;
         protected static float foldoutTopSpace = 5;
         protected static float foldoutBottomSpace = 2;
 
-        protected static bool showAnimatedIcon = false;
-        protected static bool showButton = false;
-        protected static bool showContext = false;
-        protected static bool showDropdown = false;
-        protected static bool showHorSelector = false;
-        protected static bool showInputField = false;
-        protected static bool showModalWindow = false;
-        protected static bool showNotification = false;
-        protected static bool showProgressBar = false;
-        protected static bool showScrollbar = false;
-        protected static bool showSlider = false;
-        protected static bool showSwitch = false;
-        protected static bool showToggle = false;
-        protected static bool showTooltip = false;
-        protected static bool showCustomObjects = false;
+        protected static bool showAnimatedIcon;
+        protected static bool showButton;
+        protected static bool showContext;
+        protected static bool showDropdown;
+        protected static bool showHorSelector;
+        protected static bool showInputField;
+        protected static bool showModalWindow;
+        protected static bool showNotification;
+        protected static bool showProgressBar;
+        protected static bool showScrollbar;
+        protected static bool showSlider;
+        protected static bool showSwitch;
+        protected static bool showToggle;
+        protected static bool showTooltip;
+        protected static bool showCustomObjects;
 
         private void OnEnable() 
         {
@@ -526,7 +526,7 @@ namespace Michsky.MUIP
             #endregion
 
             serializedObject.ApplyModifiedProperties();
-            if (Application.isPlaying == false) { this.Repaint(); }
+            if (Application.isPlaying == false) { Repaint(); }
 
             GUILayout.Space(12);
             GUILayout.BeginHorizontal();
@@ -556,9 +556,9 @@ namespace Michsky.MUIP
             #endregion
         }
 
-        void Email() { Application.OpenURL("https://www.michsky.com/contact/"); }
+        private void Email() { Application.OpenURL("https://www.michsky.com/contact/"); }
 
-        void ResetToDefaults()
+        private void ResetToDefaults()
         {
             if (EditorUtility.DisplayDialog("Reset to defaults", "Are you sure you want to reset UI Manager values to default?", "Yes", "Cancel"))
             {

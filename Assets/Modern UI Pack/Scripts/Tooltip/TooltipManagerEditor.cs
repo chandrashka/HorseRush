@@ -133,7 +133,7 @@ namespace Michsky.MUIP
                     break;            
             }
 
-            if (Application.isPlaying == false) { this.Repaint(); }
+            if (Application.isPlaying == false) { Repaint(); }
             serializedObject.ApplyModifiedProperties();
         }
     }

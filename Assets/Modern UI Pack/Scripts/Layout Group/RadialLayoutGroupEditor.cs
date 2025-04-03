@@ -19,24 +19,24 @@ namespace Michsky.MUIP
         private SerializedProperty angleRange;
         private SerializedProperty childRotate;
 
-        void OnEnable()
+        private void OnEnable()
         {
-            if (this.target == null)
+            if (target == null)
                 return;
 
-            this.rlgTarget = this.target as RadialLayoutGroup;
+            rlgTarget = target as RadialLayoutGroup;
 
             if (EditorGUIUtility.isProSkin == true) { customSkin = MUIPEditorHandler.GetDarkEditor(customSkin); }
             else { customSkin = MUIPEditorHandler.GetLightEditor(customSkin); }
 
-            var serObj = this.serializedObject;
-            this.layoutDir = serObj.FindProperty("refLayoutDir");
-            this.radiusStart = serObj.FindProperty("refRadiusStart");
-            this.radiusRange = serObj.FindProperty("refRadiusRange");
-            this.angleStart = serObj.FindProperty("refAngleStart");
-            this.angleCenter = serObj.FindProperty("refAngleCenter");
-            this.angleRange = serObj.FindProperty("refAngleRange");
-            this.childRotate = serObj.FindProperty("refChildRotate");
+            var serObj = serializedObject;
+            layoutDir = serObj.FindProperty("refLayoutDir");
+            radiusStart = serObj.FindProperty("refRadiusStart");
+            radiusRange = serObj.FindProperty("refRadiusRange");
+            angleStart = serObj.FindProperty("refAngleStart");
+            angleCenter = serObj.FindProperty("refAngleCenter");
+            angleRange = serObj.FindProperty("refAngleRange");
+            childRotate = serObj.FindProperty("refChildRotate");
         }
 
         public override void OnInspectorGUI()
@@ -74,7 +74,7 @@ namespace Michsky.MUIP
 
             childRotate.boolValue = MUIPEditorHandler.DrawToggle(childRotate.boolValue, customSkin, "Rotate Child");
 
-            if (Application.isPlaying == false) { this.Repaint(); }
+            if (Application.isPlaying == false) { Repaint(); }
             serializedObject.ApplyModifiedProperties();
         }
     }

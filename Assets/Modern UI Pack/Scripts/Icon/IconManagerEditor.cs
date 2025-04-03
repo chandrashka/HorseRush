@@ -9,19 +9,19 @@ namespace Michsky.MUIP
     [CustomEditor(typeof(IconManager))]
     public class IconManagerEditor : Editor
     {
-        GUISkin customSkin;
+        private GUISkin customSkin;
         private IconManager imTarget;
         private int currentTab;
         private int tempSizeIndex;
         private string tempSizeID;
         private string searchText;
-        private string defaultSize = "128x";
+        private readonly string defaultSize = "128x";
 
         protected GUIStyle panelStyle;
         protected GUIStyle lipStyle;
         protected GUIStyle lipAltStyle;
-        Vector2 scrollPosition = Vector2.zero;
-        List<string> sizeList = new List<string>();
+        private Vector2 scrollPosition = Vector2.zero;
+        private readonly List<string> sizeList = new();
 
         private void OnEnable()
         {
@@ -43,7 +43,7 @@ namespace Michsky.MUIP
             }
         }
 
-        void UpdateIconProperties()
+        private void UpdateIconProperties()
         {
             sizeList.Clear();
             if (imTarget.size32 == true) { sizeList.Add("32x"); }
@@ -64,7 +64,7 @@ namespace Michsky.MUIP
             EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
         }
 
-        void ConvertIDtoIndex()
+        private void ConvertIDtoIndex()
         {
             if (tempSizeID == "32x") { imTarget.spriteSize = 0; }
             else if (tempSizeID == "64x") { imTarget.spriteSize = 1; }
@@ -272,7 +272,7 @@ namespace Michsky.MUIP
                     break;
             }
 
-            if (Application.isPlaying == false) { this.Repaint(); }
+            if (Application.isPlaying == false) { Repaint(); }
             serializedObject.ApplyModifiedProperties();
         }
 

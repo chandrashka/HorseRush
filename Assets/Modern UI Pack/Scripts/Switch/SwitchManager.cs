@@ -11,9 +11,9 @@ namespace Michsky.MUIP
     public class SwitchManager : MonoBehaviour, IPointerEnterHandler
     {
         // Events
-        [SerializeField] public SwitchEvent onValueChanged = new SwitchEvent();
-        public UnityEvent OnEvents = new UnityEvent();
-        public UnityEvent OffEvents = new UnityEvent();
+        [SerializeField] public SwitchEvent onValueChanged = new();
+        public UnityEvent OnEvents = new();
+        public UnityEvent OffEvents = new();
 
         // Saving
         public bool saveValue = true;
@@ -22,7 +22,7 @@ namespace Michsky.MUIP
         // Settings
         public bool isOn = true;
         public bool invokeAtStart = true;
-        public bool enableSwitchSounds = false;
+        public bool enableSwitchSounds;
         public bool useHoverSound = true;
         public bool useClickSound = true;
 
@@ -38,9 +38,9 @@ namespace Michsky.MUIP
         [System.Serializable]
         public class SwitchEvent : UnityEvent<bool> { }
 
-        bool isInitialized = false;
+        private bool isInitialized;
 
-        void Awake()
+        private void Awake()
         {
             if (switchAnimator == null) { switchAnimator = gameObject.GetComponent<Animator>(); }
             if (switchButton == null)
@@ -75,7 +75,7 @@ namespace Michsky.MUIP
             isInitialized = true;
         }
 
-        void OnEnable() 
+        private void OnEnable() 
         {
             if (isInitialized) 
             {
@@ -83,7 +83,7 @@ namespace Michsky.MUIP
             } 
         }
 
-        void GetSavedData()
+        private void GetSavedData()
         {
             if (gameObject.activeInHierarchy) 
             {
@@ -191,7 +191,7 @@ namespace Michsky.MUIP
             }
         }
 
-        IEnumerator DisableAnimator()
+        private IEnumerator DisableAnimator()
         {
             yield return new WaitForSecondsRealtime(0.5f);
             switchAnimator.enabled = false;

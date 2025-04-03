@@ -6,8 +6,8 @@ namespace Michsky.MUIP
     public class RangeSlider : MonoBehaviour
     {
         [Header("Settings")]
-        [Range(0,2)] public int decimalPlaces = 0;
-        public float minValue = 0;
+        [Range(0,2)] public int decimalPlaces;
+        public float minValue;
         public float maxValue = 1;
         public bool showLabels = true;
         public bool useWholeNumbers = true;
@@ -23,7 +23,7 @@ namespace Michsky.MUIP
         public float CurrentLowerValue { get { return minSlider.value; } }
         public float CurrentUpperValue { get { return maxSlider.realValue; } }
 
-        void Awake()
+        private void Awake()
         {
             if (minSlider == null || maxSlider == null)
                 return;

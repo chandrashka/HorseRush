@@ -15,15 +15,15 @@ namespace Michsky.MUIP
         public TextMeshProUGUI popupValueText;
 
         // Saving
-        public bool enableSaving = false;
+        public bool enableSaving;
         public bool invokeOnAwake = true;
         public string sliderTag = "My Slider";
 
         // Settings
-        public bool usePercent = false;
+        public bool usePercent;
         public bool showValue = true;
         public bool showPopupValue = true;
-        public bool useRoundValue = false;
+        public bool useRoundValue;
         public DecimalFormat decimalFormat = DecimalFormat.F1;
         public float minValue;
         public float maxValue;
@@ -32,7 +32,7 @@ namespace Michsky.MUIP
         [System.Serializable]
         public class SliderEvent : UnityEvent<float> { }
         [SerializeField]
-        public SliderEvent onValueChanged = new SliderEvent();
+        public SliderEvent onValueChanged = new();
         [Space(8)] public SliderEvent sliderEvent;
 
         // Other Variables
@@ -44,7 +44,7 @@ namespace Michsky.MUIP
             F0, F1, F2, F3, F4, F5
         }
 
-        void Awake()
+        private void Awake()
         {
             if (enableSaving == true)
             {

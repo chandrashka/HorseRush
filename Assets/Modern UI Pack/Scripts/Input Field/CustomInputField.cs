@@ -18,23 +18,23 @@ namespace Michsky.MUIP
         [SerializeField] private Animator inputFieldAnimator;
 
         [Header("Settings")]
-        public bool processSubmit = false;
+        public bool processSubmit;
         public bool clearOnSubmit = true;
         [Tooltip("Set the current event system object as null.")]
-        [SerializeField] private bool setEventSystem = false;
+        [SerializeField] private bool setEventSystem;
 
         [Header("Events")]
-        public UnityEvent onSubmit = new UnityEvent();
+        public UnityEvent onSubmit = new();
 
         // Hidden variables
-        private float cachedDuration = 0.5f;
-        private string inAnim = "In";
-        private string outAnim = "Out";
-        private string instaInAnim = "Instant In";
-        private string instaOutAnim = "Instant Out";
-        private bool isActive = false;
+        private readonly float cachedDuration = 0.5f;
+        private readonly string inAnim = "In";
+        private readonly string outAnim = "Out";
+        private readonly string instaInAnim = "Instant In";
+        private readonly string instaOutAnim = "Instant Out";
+        private bool isActive;
 
-        void Awake()
+        private void Awake()
         {
             Initialize();
 
@@ -45,14 +45,14 @@ namespace Michsky.MUIP
             UpdateStateInstant();
         }
 
-        void OnEnable()
+        private void OnEnable()
         {
             if (inputText == null || inputFieldAnimator == null) { Initialize(); }
             inputText.ForceLabelUpdate();
             UpdateStateInstant();
         }
 
-        void Update()
+        private void Update()
         {
             if (!processSubmit || string.IsNullOrEmpty(inputText.text) || EventSystem.current.currentSelectedGameObject != inputText.gameObject)
                 return;
@@ -82,7 +82,7 @@ namespace Michsky.MUIP
 #endif
         }
 
-        void Initialize()
+        private void Initialize()
         {
             if (inputText == null) { inputText = gameObject.GetComponent<TMP_InputField>(); }
             if (inputFieldAnimator == null) { inputFieldAnimator = gameObject.GetComponent<Animator>(); }
@@ -131,7 +131,7 @@ namespace Michsky.MUIP
             else { isActive = true; inputFieldAnimator.Play(instaInAnim); }
         }
 
-        void HandleEndEdit()
+        private void HandleEndEdit()
         {
             if (setEventSystem && string.IsNullOrEmpty(inputText.text) && !EventSystem.current.alreadySelecting && EventSystem.current.currentSelectedGameObject == inputText.gameObject)
             {
@@ -141,7 +141,7 @@ namespace Michsky.MUIP
             AnimateOut();
         }
 
-        IEnumerator DisableAnimator()
+        private IEnumerator DisableAnimator()
         {
             yield return new WaitForSecondsRealtime(cachedDuration);
             inputFieldAnimator.enabled = false;

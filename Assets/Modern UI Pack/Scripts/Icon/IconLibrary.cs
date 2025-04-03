@@ -7,14 +7,14 @@ namespace Michsky.MUIP
     public class IconLibrary : ScriptableObject
     {
         // Settings
-        public bool alwaysUpdate = false;
+        public bool alwaysUpdate;
         public bool optimizeUpdates = true;
 
         // Editor Only
         public Texture2D searchIcon;
 
         // Library
-        public List<IconItem> icons = new List<IconItem>();
+        public List<IconItem> icons = new();
 
         [System.Serializable]
         public class IconItem

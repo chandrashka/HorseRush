@@ -13,26 +13,26 @@ namespace Michsky.MUIP
         [SerializeField] private Image background;
         [SerializeField] private Image bar;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateScrollbar();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateScrollbar(); }
         }
 
-        void UpdateScrollbar()
+        private void UpdateScrollbar()
         {
             background.color = UIManagerAsset.scrollbarBackgroundColor;
             bar.color = UIManagerAsset.scrollbarColor;

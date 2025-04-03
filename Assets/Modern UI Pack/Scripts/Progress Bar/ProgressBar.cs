@@ -10,7 +10,7 @@ namespace Michsky.MUIP
         // Content
         public float currentPercent;
         [Range(0, 100)] public int speed;
-        public float minValue = 0;
+        public float minValue;
         public float maxValue = 100;
         public float valueLimit = 100;
 
@@ -26,8 +26,8 @@ namespace Michsky.MUIP
         public bool addSuffix = true;
         public string prefix = "";
         public string suffix = "%";
-        public bool isLooped = false;
-        [Range(0, 5)] public int decimals = 0;
+        public bool isLooped;
+        [Range(0, 5)] public int decimals;
 
         // Events
         [System.Serializable]
@@ -35,13 +35,13 @@ namespace Michsky.MUIP
         public ProgressBarEvent onValueChanged;
         [HideInInspector] public Slider eventSource;
 
-        void Start()
+        private void Start()
         {
             UpdateUI();
             InitializeEvents();
         }
 
-        void Update()
+        private void Update()
         {
             if (!isOn)
                 return;

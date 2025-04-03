@@ -9,36 +9,36 @@ namespace Michsky.MUIP
     {
         [Header("Settings")]
         [SerializeField] private UIManager UIManagerAsset;
-        [HideInInspector] public bool overrideColors = false;
-        [HideInInspector] public bool overrideFonts = false;
+        [HideInInspector] public bool overrideColors;
+        [HideInInspector] public bool overrideFonts;
 
         [Header("Resources")]
         [SerializeField] private Image bar;
         [SerializeField] private Image background;
         [SerializeField] private TextMeshProUGUI label;
 
-        bool dynamicUpdateEnabled;
+        private bool dynamicUpdateEnabled;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateProgressBar();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateProgressBar(); }
         }
 
-        void UpdateProgressBar()
+        private void UpdateProgressBar()
         {
             if (overrideColors == false)
             {

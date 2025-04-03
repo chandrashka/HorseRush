@@ -24,7 +24,7 @@ namespace Michsky.MUIP
 
         // Saving
         public bool enableIcon = true;
-        public bool saveSelected = false;
+        public bool saveSelected;
         public string saveKey = "My Selector";
 
         // Settings
@@ -34,11 +34,11 @@ namespace Michsky.MUIP
         public bool loopSelection;
         [Range(0.25f, 2.5f)] public float iconScale = 1;
         [Range(1, 50)] public int contentSpacing = 15;
-        public int defaultIndex = 0;
-        [HideInInspector] public int index = 0;
+        public int defaultIndex;
+        [HideInInspector] public int index;
 
         // Items
-        public List<Item> items = new List<Item>();
+        public List<Item> items = new();
 
         // Events
         [System.Serializable] public class SelectorEvent : UnityEvent<int> { }
@@ -51,10 +51,10 @@ namespace Michsky.MUIP
         {
             public string itemTitle = "Item Title";
             public Sprite itemIcon;
-            public UnityEvent onItemSelect = new UnityEvent();
+            public UnityEvent onItemSelect = new();
         }
 
-        void Awake()
+        private void Awake()
         {
             if (selectorAnimator == null) { selectorAnimator = gameObject.GetComponent<Animator>(); }
             if (label == null || labelHelper == null)
@@ -73,7 +73,7 @@ namespace Michsky.MUIP
             }
         }
 
-        void OnEnable()
+        private void OnEnable()
         {
             if (gameObject.activeInHierarchy) { StartCoroutine("DisableAnimator"); }
         }
@@ -330,7 +330,7 @@ namespace Michsky.MUIP
             LayoutRebuilder.ForceRebuildLayoutImmediate(label.transform.parent.GetComponent<RectTransform>());
         }
 
-        IEnumerator DisableAnimator()
+        private IEnumerator DisableAnimator()
         {
             yield return new WaitForSecondsRealtime(0.5f);
             selectorAnimator.enabled = false;

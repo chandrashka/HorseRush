@@ -4,7 +4,253 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad3ca51-828a-4362-99e5-ca85665107d8" name="Changes" comment="" />
+    <list default="true" id="7ad3ca51-828a-4362-99e5-ca85665107d8" name="Changes" comment="added main logic">
+      <change afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/AdaptivePerformanceGeneralSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/AdaptivePerformanceGeneralSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/Provider.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/Provider/Google Android Provider Loader.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/Provider/Google Android Provider Loader.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/Settings/Google Android Provider Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/Settings/Google Android Provider Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/AlmostWhite_Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/AlmostWhite_Texture.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DarkGrey_Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DarkGrey_Texture.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoLayer_Grass.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoLayer_Grass.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoLayer_Snow.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoLayer_Snow.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoLayer_Stone.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoLayer_Stone.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoSky2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoSky2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoSkybox.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoSkybox.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoTerrain.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/DemoTerrain.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/Green_Tex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/Green_Tex.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/Grey.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/Grey.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/NewLayer.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/NewLayer.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/SimpleGrass_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/DemoAssets/SimpleGrass_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/HorseController.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/HorseController.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Scenes/Demo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Scenes/Demo.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Scenes/Demo.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Scenes/Demo/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Scenes/Demo/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Scenes/Demo/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Scenes/Demo/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Horse3D_Opt_Ver4.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Horse3D_Opt_Ver4.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Horse3D_Ver4_Saddled.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Horse3D_Ver4_Saddled.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_BayBlack.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_BayBlack.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_BayWhite.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_BayWhite.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_BlackBlack.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_BlackBlack.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_BlackWhite.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_BlackWhite.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_ChestnutBlack.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_ChestnutBlack.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_ChestnutWhite.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_ChestnutWhite.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_TanBlack.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_TanBlack.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_TanWhite.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_TanWhite.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_WhiteBlack.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_WhiteBlack.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_WhiteWhite.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Body_WhiteWhite.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Eye_Blue_Mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Eye_Blue_Mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Eye_Brown_Mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Eye_Brown_Mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Mane_Black_Mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Mane_Black_Mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Mane_White.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Materials/Mane_White.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_BayBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_BayBlack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_BayWhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_BayWhite.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_BlackBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_BlackBlack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_BlackWhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_BlackWhite.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_ChestnutBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_ChestnutBlack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_Chestnut_White.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_Chestnut_White.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_Specular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_Specular.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_Specular2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_Specular2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_TanWhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_TanWhite.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_TanlBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_TanlBlack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_WhiteBlack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_WhiteBlack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_WhiteWhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Body_WhiteWhite.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Eye_Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Eye_Blue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Eye_Brown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Eye_Brown.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Eye_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Eye_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Eye_Specular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Eye_Specular.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Mane_Black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Mane_Black.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Mane_White.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Horse3D/Textures/Horse_Mane_White.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/READ_ME.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/READ_ME.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Materials/Saddle_Pad_Blue.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Materials/Saddle_Pad_Blue.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Materials/Saddle_Pad_Grey.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Materials/Saddle_Pad_Grey.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Materials/Saddle_Pad_Red.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Materials/Saddle_Pad_Red.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Saddle_Information.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Saddle_Information.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures/Saddle_NM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures/Saddle_NM.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures/Saddle_Pads.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures/Saddle_Pads.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures/Saddle_Pads_Grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures/Saddle_Pads_Grey.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures/Saddle_Pads_Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LPHorse_Version_2_9/Version_2_31/Saddle/Textures/Saddle_Pads_Red.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GateController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GateController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HorseController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HorseController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/photo_2025-04-03_17-13-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/photo_2025-04-03_17-13-10.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorseRush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorseRush/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Environments/Props/Start/StartFream/Ani/AMT_StartFrame.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Environments/Props/Start/StartFream/Ani/AMT_StartFrame.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Scene/Race_Ascot.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Scene/Race_Ascot.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Editor/Scripts/ContextMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Editor/Scripts/ContextMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Button/ButtonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Button/ButtonManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Button/ButtonManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Button/ButtonManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Charts/PieChart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Charts/PieChart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Charts/PieChartEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Charts/PieChartEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuContent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuContentEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuContentEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuContentMobile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuContentMobile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuSubMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Context Menu/ContextMenuSubMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Demo/DemoElementSway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Demo/DemoElementSway.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Demo/DemoElementSwayParent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Demo/DemoElementSwayParent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Demo/DemoListShadow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Demo/DemoListShadow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Demo/InputSystemChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Demo/InputSystemChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Dropdown/CustomDropdown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Dropdown/CustomDropdown.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Dropdown/CustomDropdownEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Dropdown/CustomDropdownEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Dropdown/DropdownMultiSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Dropdown/DropdownMultiSelect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Dropdown/DropdownMultiSelectEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Dropdown/DropdownMultiSelectEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Horizontal Selector/HorizontalSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Horizontal Selector/HorizontalSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Horizontal Selector/HorizontalSelectorEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Horizontal Selector/HorizontalSelectorEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/AnimatedIconHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/AnimatedIconHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/IconLibrary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/IconLibrary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/IconLibraryEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/IconLibraryEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/IconManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/IconManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/IconManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Icon/IconManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Input Field/CustomInputField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Input Field/CustomInputField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Layout Group/LayoutGroupFix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Layout Group/LayoutGroupFix.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Layout Group/RadialLayoutGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Layout Group/RadialLayoutGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Layout Group/RadialLayoutGroupEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Layout Group/RadialLayoutGroupEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/ListView/ListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/ListView/ListView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/ListView/ListViewEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/ListView/ListViewEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Modal Window/ModalWindowManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Modal Window/ModalWindowManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Modal Window/ModalWindowManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Modal Window/ModalWindowManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Notification/NotificationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Notification/NotificationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Notification/NotificationManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Notification/NotificationManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Notification/NotificationStacking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Notification/NotificationStacking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/PBFilled.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/PBFilled.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBarEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBarEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Rendering/Ripple.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Rendering/Ripple.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Rendering/UIGradient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Rendering/UIGradient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Rendering/UIGradientEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Rendering/UIGradientEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RadialSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RadialSlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RadialSliderEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RadialSliderEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RangeMaxSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RangeMaxSlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RangeSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RangeSlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/SliderInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/SliderInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/SliderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/SliderManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/SliderManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/SliderManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Switch/SwitchManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Switch/SwitchManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Switch/SwitchManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Switch/SwitchManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Toggle/CustomToggle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Toggle/CustomToggle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tools/ElementTabbing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tools/ElementTabbing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tooltip/TooltipContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tooltip/TooltipContent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tooltip/TooltipManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tooltip/TooltipManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tooltip/TooltipManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Tooltip/TooltipManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerAnimatedIcon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerAnimatedIcon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerContextMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerContextMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerCustom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerCustom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerDropdown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerDropdown.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerDropdownItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerDropdownItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerHSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerHSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerInputField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerInputField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerModalWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerModalWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerNotification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerProgressBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerProgressBarLoop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerProgressBarLoop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerScrollbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerScrollbar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerSlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerSwitch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerToggle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerToggle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerTooltip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerTooltip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Window/WindowManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Window/WindowManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Window/WindowManagerButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Window/WindowManagerButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Window/WindowManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Window/WindowManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonHorse/Scenes/Demo/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonHorse/Scenes/Demo/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,12 +271,18 @@
     &quot;accountId&quot;: &quot;16364593-d9ee-494a-a9d1-859d4ef8c5fc&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/julia/HorseRush/Assets/Content/Environments/Props/Start/StartFream/Ani/AMT_StartFrame.controller" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/julia/HorseRush/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2vAZBML10fXxHdoYb7YcHcugLK0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -105,7 +357,7 @@
       <workItem from="1743589705965" duration="4818000" />
       <workItem from="1743597245637" duration="1669000" />
       <workItem from="1743618942003" duration="265000" />
-      <workItem from="1743619223458" duration="663000" />
+      <workItem from="1743619223458" duration="14661000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -131,7 +383,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743597861823</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1743619971122</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743619971122</updated>
+    </task>
+    <task id="LOCAL-00005" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1743620130315</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743620130315</updated>
+    </task>
+    <task id="LOCAL-00006" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1743620173920</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743620173920</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +435,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="added main logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added main logic" />
   </component>
 </project>

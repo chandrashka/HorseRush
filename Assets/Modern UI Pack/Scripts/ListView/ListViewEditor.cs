@@ -10,14 +10,14 @@ namespace Michsky.MUIP
     [CustomEditor(typeof(ListView))]
     public class ListViewEditor : Editor
     {
-        GUISkin customSkin;
+        private GUISkin customSkin;
         private ListView lvTarget;
         private int currentTab;
 
         protected GUIStyle panelStyle;
         protected GUIStyle lipStyle;
         protected GUIStyle lipAltStyle;
-        Vector2 scrollPosition = Vector2.zero;
+        private Vector2 scrollPosition = Vector2.zero;
 
         private void OnEnable()
         {
@@ -237,7 +237,7 @@ namespace Michsky.MUIP
                     break;
             }
 
-            if (Application.isPlaying == false) { this.Repaint(); }
+            if (Application.isPlaying == false) { Repaint(); }
             serializedObject.ApplyModifiedProperties();
         }
 

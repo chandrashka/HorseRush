@@ -9,34 +9,34 @@ namespace Michsky.MUIP
     {
         [Header("Settings")]
         [SerializeField] private UIManager UIManagerAsset;
-        public bool overrideColors = false;
-        public bool overrideFonts = false;
+        public bool overrideColors;
+        public bool overrideFonts;
 
         [Header("Resources")]
         [SerializeField] private Image itemBackground;
         [SerializeField] private Image itemIcon;
         [SerializeField] private TextMeshProUGUI itemText;
 
-        void Awake()
+        private void Awake()
         {
             if (UIManagerAsset == null) { UIManagerAsset = Resources.Load<UIManager>("MUIP Manager"); }
 
-            this.enabled = true;
+            enabled = true;
 
             if (UIManagerAsset.enableDynamicUpdate == false)
             {
                 UpdateDropdown();
-                this.enabled = false;
+                enabled = false;
             }
         }
 
-        void Update()
+        private void Update()
         {
             if (UIManagerAsset == null) { return; }
             if (UIManagerAsset.enableDynamicUpdate == true) { UpdateDropdown(); }
         }
 
-        void UpdateDropdown()
+        private void UpdateDropdown()
         {
             if (overrideFonts == false && itemText != null) { itemText.font = UIManagerAsset.dropdownItemFont; }
             if (overrideColors == false)

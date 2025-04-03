@@ -11,10 +11,10 @@ namespace Michsky.MUIP
         [SerializeField] private TextMeshProUGUI elementTitle;
         [SerializeField] private TextMeshProUGUI elementTitleHelper;
 
-        private List<DemoElementSway> elements = new List<DemoElementSway>();
+        private readonly List<DemoElementSway> elements = new();
         private int prevIndex;
 
-        void Awake()
+        private void Awake()
         {
             foreach (Transform child in transform)
             {
@@ -74,7 +74,7 @@ namespace Michsky.MUIP
             prevIndex = index;
         }
 
-        IEnumerator SWMHelper(int index)
+        private IEnumerator SWMHelper(int index)
         {
             yield return new WaitForSeconds(0.1f);
             SetWindowManagerButton(index);

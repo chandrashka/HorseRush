@@ -23,14 +23,14 @@ namespace Michsky.MUIP
         [TextArea(1, 4)] public string descriptionText = "Description here";
 
         // Events
-        public UnityEvent onOpen = new UnityEvent();
-        public UnityEvent onClose = new UnityEvent();
-        public UnityEvent onConfirm = new UnityEvent();
-        public UnityEvent onCancel = new UnityEvent();
+        public UnityEvent onOpen = new();
+        public UnityEvent onClose = new();
+        public UnityEvent onConfirm = new();
+        public UnityEvent onCancel = new();
 
         // Settings
-        public bool useCustomContent = false;
-        public bool isOn = false;
+        public bool useCustomContent;
+        public bool isOn;
         public bool closeOnCancel = true;
         public bool closeOnConfirm = true;
         public bool showCancelButton = true;
@@ -40,13 +40,13 @@ namespace Michsky.MUIP
         public OnEnableBehaviour onEnableBehaviour = OnEnableBehaviour.None;
 
         // Helpers
-        float cachedStateLength;
+        private float cachedStateLength;
 
         public enum StartBehaviour { None, Disable, Enable }
         public enum CloseBehaviour { None, Disable, Destroy }
         public enum OnEnableBehaviour { None, Restore }
 
-        void Awake()
+        private void Awake()
         {
             isOn = false;
 
@@ -62,7 +62,7 @@ namespace Michsky.MUIP
             UpdateUI();
         }
 
-        void OnEnable()
+        private void OnEnable()
         {
             if (onEnableBehaviour == OnEnableBehaviour.Restore && isOn) 
             {
@@ -71,7 +71,7 @@ namespace Michsky.MUIP
             }
         }
 
-        void OnDisable()
+        private void OnDisable()
         {
             if (onEnableBehaviour == OnEnableBehaviour.None)
             {
@@ -145,7 +145,7 @@ namespace Michsky.MUIP
             }
         }
 
-        IEnumerator DisableObject()
+        private IEnumerator DisableObject()
         {
             yield return new WaitForSecondsRealtime(cachedStateLength);
 
